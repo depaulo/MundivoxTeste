@@ -1,0 +1,21 @@
+﻿@using WorldCup.Models
+
+@{
+    ViewData["Title"] = "Inicio";
+}
+<section class="jubotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading py-5">Bom dia, bem vindo a Copa do Mundo!</h1>
+        <p>Os times que participaram do torneio estao abaixo. Porfavor click no botao comecar o torneio.</p>
+        <h2>Equipes: </h2>
+        <div class="row bg-white border box-shadow align-left py-5">
+            @foreach (var each in ViewBag.Times)
+            {   
+                <div class="col-2 text-left">
+                    @each.Nome
+                </div>
+            }
+        </div>
+    </div>
+
+</section>
